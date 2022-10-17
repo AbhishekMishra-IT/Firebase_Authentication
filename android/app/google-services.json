@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "222260703059",
+    "project_id": "fir-auth-bedcc",
+    "storage_bucket": "fir-auth-bedcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222260703059:android:18f086b8ae8ad36fa27ba6",
+        "android_client_info": {
+          "package_name": "com.demoredux"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222260703059-8gdquqp9e4q58s4onl71bmgnhkebbks7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHS9wYgvLJitEI-CKbEBjqJou7PzjvzRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222260703059-8gdquqp9e4q58s4onl71bmgnhkebbks7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
