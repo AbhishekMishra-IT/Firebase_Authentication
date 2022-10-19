@@ -1,4 +1,4 @@
-import React, {useState, createRef, useContext} from 'react';
+import React, { useState, createRef, useContext } from 'react';
 import {
   StyleSheet,
   TextInput,
@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { AuthContext } from '../Navigation/AuthProvider';
 
- 
+
 const Registration = (props) => {
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
@@ -25,113 +25,113 @@ const Registration = (props) => {
     isRegistraionSuccess,
     setIsRegistraionSuccess
   ] = useState(false);
- 
+
   const emailInputRef = createRef();
   const ageInputRef = createRef();
   const addressInputRef = createRef();
   const passwordInputRef = createRef();
 
-  const {register} = useContext(AuthContext);
- 
-//   const handleSubmitButton = () => {
-//     setErrortext('');
-//     if (!userName) {
-//       alert('Please fill Name');
-//       return;
-//     }
-//     if (!userEmail) {
-//       alert('Please fill Email');
-//       return;
-//     }
-//     if (!userAge) {
-//       alert('Please fill Age');
-//       return;
-//     }
-//     if (!userAddress) {
-//       alert('Please fill Address');
-//       return;
-//     }
-//     if (!userPassword) {
-//       alert('Please fill Password');
-//       return;
-//     }
-//     //Show Loader
-//     setLoading(true);
-//     var dataToSend = {
-//       name: userName,
-//       email: userEmail,
-//       age: userAge,
-//       address: userAddress,
-//       password: userPassword,
-//     };
-//     var formBody = [];
-//     for (var key in dataToSend) {
-//       var encodedKey = encodeURIComponent(key);
-//       var encodedValue = encodeURIComponent(dataToSend[key]);
-//       formBody.push(encodedKey + '=' + encodedValue);
-//     }
-//     formBody = formBody.join('&');
- 
-//     fetch('http://localhost:3000/api/user/register', {
-//       method: 'POST',
-//       body: formBody,
-//       headers: {
-//         //Header Defination
-//         'Content-Type':
-//         'application/x-www-form-urlencoded;charset=UTF-8',
-//       },
-//     })
-//       .then((response) => response.json())
-//       .then((responseJson) => {
-//         //Hide Loader
-//         setLoading(false);
-//         console.log(responseJson);
-//         // If server response message same as Data Matched
-//         if (responseJson.status === 'success') {
-//           setIsRegistraionSuccess(true);
-//           console.log(
-//             'Registration Successful. Please Login to proceed'
-//           );
-//         } else {
-//           setErrortext(responseJson.msg);
-//         }
-//       })
-//       .catch((error) => {
-//         //Hide Loader
-//         setLoading(false);
-//         console.error(error);
-//       });
-//   };
-//   if (isRegistraionSuccess) {
-//     return (
-//       <View
-//         style={{
-//           flex: 1,
-//           backgroundColor: '#307ecc',
-//           justifyContent: 'center',
-//         }}>
-//         <Image
-//           source={require('../Image/success.png')}
-//           style={{
-//             height: 150,
-//             resizeMode: 'contain',
-//             alignSelf: 'center'
-//           }}
-//         />
-//         <Text style={styles.successTextStyle}>
-//           Registration Successful
-//         </Text>
-//         <TouchableOpacity
-//           style={styles.buttonStyle}
-//           activeOpacity={0.5}
-//           onPress={() => props.navigation.navigate('LoginScreen')}>
-//           <Text style={styles.buttonTextStyle}>Login Now</Text>
-//         </TouchableOpacity>
-//       </View>
-//     );
-//   }
+  const { register } = useContext(AuthContext);
+
+  //   const handleSubmitButton = () => {
+  //     setErrortext('');
+  //     if (!userName) {
+  //       alert('Please fill Name');
+  //       return;
+  //     }
+  //     if (!userEmail) {
+  //       alert('Please fill Email');
+  //       return;
+  //     }
+  //     if (!userAge) {
+  //       alert('Please fill Age');
+  //       return;
+  //     }
+  //     if (!userAddress) {
+  //       alert('Please fill Address');
+  //       return;
+  //     }
+  //     if (!userPassword) {
+  //       alert('Please fill Password');
+  //       return;
+  //     }
+  //     //Show Loader
+  //     setLoading(true);
+  //     var dataToSend = {
+  //       name: userName,
+  //       email: userEmail,
+  //       age: userAge,
+  //       address: userAddress,
+  //       password: userPassword,
+  //     };
+  //     var formBody = [];
+  //     for (var key in dataToSend) {
+  //       var encodedKey = encodeURIComponent(key);
+  //       var encodedValue = encodeURIComponent(dataToSend[key]);
+  //       formBody.push(encodedKey + '=' + encodedValue);
+  //     }
+  //     formBody = formBody.join('&');
+
+  //     fetch('http://localhost:3000/api/user/register', {
+  //       method: 'POST',
+  //       body: formBody,
+  //       headers: {
+  //         //Header Defination
+  //         'Content-Type':
+  //         'application/x-www-form-urlencoded;charset=UTF-8',
+  //       },
+  //     })
+  //       .then((response) => response.json())
+  //       .then((responseJson) => {
+  //         //Hide Loader
+  //         setLoading(false);
+  //         console.log(responseJson);
+  //         // If server response message same as Data Matched
+  //         if (responseJson.status === 'success') {
+  //           setIsRegistraionSuccess(true);
+  //           console.log(
+  //             'Registration Successful. Please Login to proceed'
+  //           );
+  //         } else {
+  //           setErrortext(responseJson.msg);
+  //         }
+  //       })
+  //       .catch((error) => {
+  //         //Hide Loader
+  //         setLoading(false);
+  //         console.error(error);
+  //       });
+  //   };
+  //   if (isRegistraionSuccess) {
+  //     return (
+  //       <View
+  //         style={{
+  //           flex: 1,
+  //           backgroundColor: '#307ecc',
+  //           justifyContent: 'center',
+  //         }}>
+  //         <Image
+  //           source={require('../Image/success.png')}
+  //           style={{
+  //             height: 150,
+  //             resizeMode: 'contain',
+  //             alignSelf: 'center'
+  //           }}
+  //         />
+  //         <Text style={styles.successTextStyle}>
+  //           Registration Successful
+  //         </Text>
+  //         <TouchableOpacity
+  //           style={styles.buttonStyle}
+  //           activeOpacity={0.5}
+  //           onPress={() => props.navigation.navigate('LoginScreen')}>
+  //           <Text style={styles.buttonTextStyle}>Login Now</Text>
+  //         </TouchableOpacity>
+  //       </View>
+  //     );
+  //   }
   return (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1 }}>
       {/* <Loader loading={loading} /> */}
       <ScrollView
         keyboardShouldPersistTaps="handled"
@@ -139,16 +139,18 @@ const Registration = (props) => {
           justifyContent: 'center',
           alignContent: 'center',
         }}>
-        <View style={{alignItems: 'center'}}>
-          {/* <Image
-            source={require('../Image/aboutreact.png')}
+        <View style={{ alignItems: 'center' }}>
+          <Image
+            source={{
+              uri: 'https://seeklogo.com/images/F/firebase-logo-402F407EE0-seeklogo.com.png',
+            }}
             style={{
-              width: '50%',
+              width: '60%',
               height: 100,
               resizeMode: 'contain',
               margin: 30,
             }}
-          /> */}
+          />
         </View>
         <KeyboardAvoidingView enabled>
           <View style={styles.SectionStyle}>
@@ -233,7 +235,7 @@ const Registration = (props) => {
             style={styles.buttonStyle}
             activeOpacity={0.5}
             onPress={() => register(userEmail, userPassword)}
-            >
+          >
             <Text style={styles.buttonTextStyle}>REGISTER</Text>
           </TouchableOpacity>
         </KeyboardAvoidingView>
@@ -242,7 +244,7 @@ const Registration = (props) => {
   );
 };
 export default Registration;
- 
+
 const styles = StyleSheet.create({
   SectionStyle: {
     flexDirection: 'row',
@@ -253,13 +255,13 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   buttonStyle: {
-    backgroundColor: '#7DE24E',
+    backgroundColor: '#F6C026',
     borderWidth: 0,
     color: '#FFFFFF',
     borderColor: '#7DE24E',
     height: 40,
     alignItems: 'center',
-    borderRadius: 30,
+    borderRadius: 10,
     marginLeft: 35,
     marginRight: 35,
     marginTop: 20,
@@ -267,16 +269,16 @@ const styles = StyleSheet.create({
   },
   buttonTextStyle: {
     color: '#FFFFFF',
+    fontWeight: '600',
     paddingVertical: 10,
     fontSize: 16,
   },
   inputStyle: {
     flex: 1,
-    color: 'white',
     paddingLeft: 15,
     paddingRight: 15,
     borderWidth: 1,
-    borderRadius: 30,
+    borderRadius: 10,
     borderColor: '#dadae8',
   },
   errorTextStyle: {

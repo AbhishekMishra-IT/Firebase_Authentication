@@ -86,17 +86,19 @@ const Login = ({navigation}) => {
         }}>
         <View>
           <KeyboardAvoidingView enabled>
-            {/* <View style={{alignItems: 'center'}}>
+            <View style={{alignItems: 'center'}}>
               <Image
-                source={require('../Image/aboutreact.png')}
+                source={{
+                  uri: 'https://seeklogo.com/images/F/firebase-logo-402F407EE0-seeklogo.com.png',
+                }}
                 style={{
-                  width: '50%',
+                  width: '60%',
                   height: 100,
                   resizeMode: 'contain',
                   margin: 30,
                 }}
               />
-            </View> */}
+            </View>
             <View style={styles.SectionStyle}>
               <TextInput
                 style={styles.inputStyle}
@@ -135,11 +137,6 @@ const Login = ({navigation}) => {
                 returnKeyType="next"
               />
             </View>
-            {errortext != '' ? (
-              <Text style={styles.errorTextStyle}>
-                {errortext}
-              </Text>
-            ) : null}
             <TouchableOpacity
               style={styles.buttonStyle}
               activeOpacity={0.5}
@@ -175,13 +172,13 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   buttonStyle: {
-    backgroundColor: '#7DE24E',
+    backgroundColor: '#F6C026',
     borderWidth: 0,
     color: '#FFFFFF',
-    borderColor: '#7DE24E',
+    // borderColor: '#7DE24E',
     height: 40,
     alignItems: 'center',
-    borderRadius: 30,
+    borderRadius: 10,
     marginLeft: 35,
     marginRight: 35,
     marginTop: 20,
@@ -190,6 +187,7 @@ const styles = StyleSheet.create({
   buttonTextStyle: {
     color: '#FFFFFF',
     paddingVertical: 10,
+    fontWeight:'600',
     fontSize: 16,
   },
   inputStyle: {
@@ -198,7 +196,7 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     paddingRight: 15,
     borderWidth: 1,
-    borderRadius: 30,
+    borderRadius: 10,
     borderColor: '#dadae8',
   },
   registerTextStyle: {
